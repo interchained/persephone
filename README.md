@@ -38,10 +38,17 @@ other thing.
 
 ## What she is not
 
-- **Not an API wrapper.** No developer keys, no model aggregation, no
-  per-token markup. Your agents run on your subscriptions.
+- **Not a model-inference API wrapper.** No developer keys, no model
+  aggregation, no per-token markup. Your agents run on your subscriptions.
+  (Transport APIs — mail, scheduling, the platforms' own connectors — are
+  legitimate plumbing. The wrapper Persephone refuses to be is the
+  middleman reselling inference.)
 - **Not a new app you have to adopt.** She lives as a plugin inside the
-  platforms you already open every day.
+  platforms you already open every day. And the plugin is only *one
+  implementation*: Persephone is a protocol — open, transport-agnostic
+  agent-to-agent coordination through existing AI accounts, under human
+  authority and native platform governance — not a product interface
+  anyone is required to adopt in a particular shape.
 - **Not a screen puppeteer.** No deep-link app-bouncing, no foreground
   takeovers. Background work, completion reports, logs.
 - **Not a memory thief.** No platform grants an integration access to your
@@ -143,6 +150,11 @@ python3 plugin/broker/smoke_test.py http://127.0.0.1:8790
 - [ ] Claude via connector + scheduled pull
 - [ ] Muse connector track — initiation there is undocumented,
       and undocumented means *not yet mapped*, not impossible
+- [x] First live cross-agent proof over mail (2026-11-26): Muse tasked
+      the Oracle by email; it replied in-thread with a verifiable
+      artifact — and a critique of this README, which is now incorporated
+      above. Executed interactively; the first fully unattended run is
+      still pending the hourly reader's first completed cycle
 - [ ] The first live cross-agent review, end to end, no human relay
 
 Platform facts in this README were verified against primary sources —
